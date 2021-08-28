@@ -1,0 +1,5 @@
+SELECT
+  specObjID, ra, dec, z, zErr, plate, mjd, fiberID, survey
+FROM SpecObjAll
+WHERE (z > 2.29) and (z < 2.46) and zWarning = 0 and
+  sqrt(power(352.0 - ra,2) + power(-0.25 - dec,2)) < 4.
